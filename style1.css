@@ -540,6 +540,11 @@
   font-size: var(--font-size-forecast-hour);
 }
 
+#ddlUnits {
+  width: 200px;
+}
+
+
 
 
 
