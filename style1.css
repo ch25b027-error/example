@@ -436,7 +436,9 @@
       border-radius: 20px;
       padding: 20px 16px;
       max-height: 60vh;
-      overflow-y: scroll;
+      overflow-y: auto;
+      scrollbar-width: none;
+      
 
       @media (width >= calc(1000 / 16 * 1rem)) {
         position: absolute;
@@ -537,6 +539,7 @@
   left: 20px;
   font-size: var(--font-size-forecast-hour);
 }
+
 
 
 
