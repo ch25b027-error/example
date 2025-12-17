@@ -201,7 +201,7 @@ function loadHourlyForecast() {
 }
 
 function getHours() {
-  for (let h = 0; h <= 6; h++) {
+  for (let h = 0; h <= 23; h++) {
     console.log(h);
   }
 }
@@ -271,3 +271,4 @@ ddlDay.addEventListener("change", loadHourlyForecast);
 
 
 hourly__hours.body.style.overflow = 'hidden';
+
