@@ -142,7 +142,7 @@ function addDailyElement(tag, className, content, weatherCodeName, parentElement
     newElement.appendChild(newContent);
   }
   if (tag === "img") {
-    newElement.setAttribute("src", `/assets/images/icon-${weatherCodeName}.webp`);
+    newElement.setAttribute("src", `/example/assets/images/icon-${weatherCodeName}.webp`);
     newElement.setAttribute("alt", weatherCodeName);
     newElement.setAttribute("width", "320");
     newElement.setAttribute("height", "320");
@@ -158,7 +158,7 @@ function addHourlyElement(tag, className, content, weatherCodeName, parentElemen
     newElement.appendChild(newContent);
   }
   if (tag === "img") {
-    newElement.setAttribute("src", `/assets/images/icon-${weatherCodeName}.webp`);
+    newElement.setAttribute("src", `/example/assets/images/icon-${weatherCodeName}.webp`);
     newElement.setAttribute("alt", weatherCodeName);
     newElement.setAttribute("width", "320");
     newElement.setAttribute("height", "320");
@@ -268,5 +268,6 @@ getGeoData();
 btnSearch.addEventListener("click", getGeoData);
 ddlUnits.addEventListener("change", getGeoData);
 ddlDay.addEventListener("change", loadHourlyForecast);
+
 
 hourly__hours.body.style.overflow = 'hidden';
