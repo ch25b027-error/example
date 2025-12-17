@@ -530,12 +530,13 @@
 
 .defaulttemp {
   position: relative;
-  left: 180px;
+  left: 160px;
 }
 .defaulthour {
   position: relative;
   left: 20px;
   font-size: var(--font-size-forecast-hour);
 }
+
 
 
