@@ -24,8 +24,7 @@ async function getGeoData() {
     }
 
     const result = await response.json();
-    //console.log(result);
-
+ 
     let lat = result[0].lat;
     let lon = result[0].lon;
 
@@ -50,8 +49,6 @@ function loadLocationData(locationData) {
 
   let currDate = new Intl.DateTimeFormat("en-US", dateOptions).format(new Date());
 
-  //console.log(cityName, countryName, date);
-
   dvCityCountry.textContent = `${cityName}, ${countryName}`;
   dvCurrDate.textContent = currDate;
 }
@@ -61,23 +58,10 @@ async function getWeatherData(lat, lon) {
   let windUnit = "kmh";
   let precipUnit = "mm";
 
-  // if toggle value = F
   if (ddlUnits.value === "NI") {
     tempUnit = "fahrenheit";
     windUnit = "mph";
     precipUnit = "inch";
-  }
-
-  else if (ddlUnits.value === "F") {
-    tempUnit = "farenheit";
-    windUnit = "kmh";
-    precipUnit = "mm";
-  }
-
-  else if (ddlUnits.value === "c") {
-    tempUnit = "celsius"
-    windUnit = "kmh";
-    precipUnit = "mm";
   }
 
 
@@ -179,7 +163,7 @@ function loadHourlyForecast() {
   let id = 1;
 
   for (let h = firstHour; h <= lastHour; h++) {
-    // console.log(`hour = ${h}`);
+   
     let weatherCodeName = getWeatherCodeName(weatherCodes[h]);
     let temp = Math.round(temps[h]) + "°";
     let hour = new Date(hours[h]).toLocaleString("en-US", { hour: "numeric", hour12: true });
@@ -189,9 +173,7 @@ function loadHourlyForecast() {
       dvForecastHour.removeChild(dvForecastHour.firstChild);
     }
 
-    // console.log(hour, weatherCodeName, temp);
-
-    // console.log(`#dvForecastHour${id}`);
+   
     addDailyElement("img", "hourly__hour-icon", "", weatherCodeName, dvForecastHour, "afterbegin");
     addDailyElement("p", "hourly__hour-time", hour, "", dvForecastHour, "beforeend");
     addDailyElement("p", "hourly__hour-temp", temp, "", dvForecastHour, "beforeend");
@@ -271,4 +253,5 @@ ddlDay.addEventListener("change", loadHourlyForecast);
 
 
 hourly__hours.body.style.overflow = 'hidden';
+
 
