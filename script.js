@@ -152,7 +152,7 @@ function addHourlyElement(tag, className, content, weatherCodeName, parentElemen
 
 function loadHourlyForecast() {
   console.log("loadHourlyForecast()");
-  let dayIndex = parseInt(ddlDay.value, 10);
+  let dayIndex = ddlDay.value;
 
   console.log(`Day ${dayIndex + 1}`);
   let firstHour = 24 * dayIndex;
@@ -246,6 +246,7 @@ ddlDay.addEventListener("change", loadHourlyForecast);
 
 
 hourly__hours.body.style.overflow = 'hidden';
+
 
 
 
