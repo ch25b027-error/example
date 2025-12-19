@@ -181,13 +181,6 @@ function loadHourlyForecast() {
     id++;
   }
 }
-
-function getHours() {
-  for (let h = 0; h <= 23; h++) {
-    console.log(h);
-  }
-}
-
 function getWeatherCodeName(code) {
   const weatherCodes = {
     0: "sunny",
@@ -253,5 +246,6 @@ ddlDay.addEventListener("change", loadHourlyForecast);
 
 
 hourly__hours.body.style.overflow = 'hidden';
+
 
 
