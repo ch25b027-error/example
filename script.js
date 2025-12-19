@@ -245,7 +245,6 @@ ddlUnits.addEventListener("change", getGeoData);
 ddlDay.addEventListener("change", loadHourlyForecast);
 
 
-hourly__hours.body.style.overflow = 'hidden';
 
 
 
