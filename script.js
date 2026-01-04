@@ -245,9 +245,7 @@ ddlUnits.addEventListener("change", getGeoData);
 ddlDay.addEventListener("change", loadHourlyForecast);
 
 window.onload = () => {
-  const chennaiLat = 13.0827;
-  const chennaiLon = 80.2707;
-  getWeatherData(chennaiLat, chennaiLon);
+  getWeatherData(13.0827, 80.2707);
 };
 
 
