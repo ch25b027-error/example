@@ -244,6 +244,9 @@ btnSearch.addEventListener("click", getGeoData);
 ddlUnits.addEventListener("change", getGeoData);
 ddlDay.addEventListener("change", loadHourlyForecast);
 
+window.onload = () => {
+  getWeather("Chennai");
+};
 
 
 
